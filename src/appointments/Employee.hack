@@ -5,7 +5,10 @@ abstract class Employee {
 
     protected string $Name;
     protected string $PaymentMethod;
+    protected arraykey $EmployeeType;
     protected float $PricePerHour;
+    protected int $HoursPerDay;
+    
 
     public function Set_Name(string $name): void {
         $this->Name = $name;
@@ -26,5 +29,13 @@ abstract class Employee {
     }
     public function Get_PricePerHour(): float{
         return $this->PricePerHour;
+    }
+
+    public function Get_HoursPerDay(): int{
+        return $this->HoursPerDay;
+    }
+
+    public function Get_EmployeeType(): arraykey{
+        return $this->EmployeeType;
     }
 }
